@@ -12,8 +12,8 @@ const pt_Mono = PT_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "OPS Quzet",
-  description: "Охранное предприятие Кузет",
+  title: "OPS Stroy",
+  description: "Охранное предприятие ОПС Строй",
 };
 
 export default function RootLayout({
