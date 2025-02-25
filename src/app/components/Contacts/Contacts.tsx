@@ -1,10 +1,10 @@
-import type React from "react"
-import { motion } from "framer-motion"
-import { Phone, ArrowRight } from "lucide-react"
+import type React from "react";
+import { motion } from "framer-motion";
+import { Phone, ArrowRight } from "lucide-react";
 
 interface ContactsProps {
-  contactsRef: React.RefObject<HTMLDivElement>
-  contactInView: boolean
+  contactsRef: React.RefObject<HTMLDivElement | null>;
+  contactInView: boolean;
 }
 
 export default function Contacts({ contactsRef, contactInView }: ContactsProps) {
@@ -44,6 +44,5 @@ export default function Contacts({ contactsRef, contactInView }: ContactsProps) 
         </div>
       </section>
     </motion.div>
-  )
+  );
 }
-

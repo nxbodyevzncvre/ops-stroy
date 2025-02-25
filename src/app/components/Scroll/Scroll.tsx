@@ -1,27 +1,25 @@
-"use client"
+"use client";
 
-import type React from "react"
-
-import { useRef } from "react"
-import { motion } from "framer-motion"
-import { useInView } from "framer-motion"
-import BackgroundPart from "../BackGroundPart/BackGroundPart"
-import AboutSection from "@/app/components/AboutSection/AboutSection"
-import AdvantagesSection from "@/app/components/AdvantagesSection/AdvantagesSection"
-import ServicesSection from "@/app/components/ServicesSection/ServicesSection"
-import Contacts from "@/app/components/Contacts/Contacts" // Add this import
-
+import type React from "react";
+import { useRef } from "react";
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
+import BackgroundPart from "../BackGroundPart/BackGroundPart";
+import AboutSection from "@/app/components/AboutSection/AboutSection";
+import AdvantagesSection from "@/app/components/AdvantagesSection/AdvantagesSection";
+import ServicesSection from "@/app/components/ServicesSection/ServicesSection";
+import Contacts from "@/app/components/Contacts/Contacts"; // Add this import
 
 const Scroll: React.FC = () => {
-  const aboutRef = useRef<HTMLDivElement>(null)
-  const advantagesRef = useRef<HTMLDivElement>(null)
-  const servicesRef = useRef<HTMLDivElement>(null)
-  const contactRef = useRef<HTMLDivElement>(null)
+  const aboutRef = useRef<HTMLDivElement>(null);
+  const advantagesRef = useRef<HTMLDivElement>(null);
+  const servicesRef = useRef<HTMLDivElement>(null);
+  const contactRef = useRef<HTMLDivElement>(null);
 
-  const aboutInView = useInView(aboutRef, { once: true })
-  const advantagesInView = useInView(advantagesRef, { once: true })
-  const servicesInView = useInView(servicesRef, { once: true })
-  const contactInView = useInView(contactRef, { once: true })
+  const aboutInView = useInView(aboutRef, { once: true });
+  const advantagesInView = useInView(advantagesRef, { once: true });
+  const servicesInView = useInView(servicesRef, { once: true });
+  const contactInView = useInView(contactRef, { once: true });
 
   return (
     <div className="bg-gray-900">
@@ -48,9 +46,7 @@ const Scroll: React.FC = () => {
         <Contacts contactsRef={contactRef} contactInView={contactInView} />
       </motion.section>
     </div>
-  )
-}
+  );
+};
 
-export default Scroll
-
-
+export default Scroll;

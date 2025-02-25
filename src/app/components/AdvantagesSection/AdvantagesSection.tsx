@@ -1,9 +1,9 @@
-import React from "react"
-import { motion } from "framer-motion"
+import React from "react";
+import { motion } from "framer-motion";
 
 interface AdvantagesSectionProps {
-  advantagesRef: React.RefObject<HTMLDivElement>
-  advantagesInView: boolean
+  advantagesRef: React.RefObject<HTMLDivElement | null>;
+  advantagesInView: boolean;
 }
 
 const AdvantagesSection: React.FC<AdvantagesSectionProps> = ({ advantagesRef, advantagesInView }) => (
@@ -36,6 +36,6 @@ const AdvantagesSection: React.FC<AdvantagesSectionProps> = ({ advantagesRef, ad
       </div>
     </div>
   </motion.section>
-)
+);
 
-export default AdvantagesSection
+export default AdvantagesSection;

@@ -19,9 +19,12 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$re
 function Navbar({ aboutRef, advantagesRef, servicesRef, contactRef }) {
     const [isMenuOpen, setIsMenuOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
     const handleScroll = (ref)=>{
-        ref.current?.scrollIntoView({
-            behavior: "smooth"
-        });
+        // Проверяем, что ref.current существует, чтобы избежать ошибок
+        if (ref.current) {
+            ref.current.scrollIntoView({
+                behavior: "smooth"
+            });
+        }
         setIsMenuOpen(false);
     };
     const navItems = [
@@ -60,79 +63,79 @@ function Navbar({ aboutRef, advantagesRef, servicesRef, contactRef }) {
                                     size: 24
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/components/Navbar/Navbar.tsx",
-                                    lineNumber: 38,
+                                    lineNumber: 46,
                                     columnNumber: 29
                                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$menu$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Menu$3e$__["Menu"], {
                                     size: 24
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/components/Navbar/Navbar.tsx",
-                                    lineNumber: 38,
+                                    lineNumber: 46,
                                     columnNumber: 47
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/app/components/Navbar/Navbar.tsx",
-                                lineNumber: 33,
+                                lineNumber: 41,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/app/components/Navbar/Navbar.tsx",
-                            lineNumber: 32,
+                            lineNumber: 40,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
-                            className: "hidden md:flex space-x-4 ",
+                            className: "hidden md:flex space-x-4",
                             children: navItems.map((item)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                     className: "nav-item pb-2 cursor-pointer hover:text-white transition-colors duration-200",
                                     onClick: ()=>handleScroll(item.ref),
                                     children: item.name
                                 }, item.name, false, {
                                     fileName: "[project]/src/app/components/Navbar/Navbar.tsx",
-                                    lineNumber: 43,
+                                    lineNumber: 51,
                                     columnNumber: 15
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/src/app/components/Navbar/Navbar.tsx",
-                            lineNumber: 41,
+                            lineNumber: 49,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/components/Navbar/Navbar.tsx",
-                    lineNumber: 31,
+                    lineNumber: 39,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/components/Navbar/Navbar.tsx",
-                lineNumber: 30,
+                lineNumber: 38,
                 columnNumber: 7
             }, this),
             isMenuOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "md:hidden absolute top-full left-0 right-0 shadow-lg ",
+                className: "md:hidden absolute top-full left-0 right-0 shadow-lg",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
-                    className: "flex flex-col p-4 ",
+                    className: "flex flex-col p-4",
                     children: navItems.map((item)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                             className: "nav-item py-2 cursor-pointer hover:text-white transition-colors duration-200",
                             onClick: ()=>handleScroll(item.ref),
                             children: item.name
                         }, item.name, false, {
                             fileName: "[project]/src/app/components/Navbar/Navbar.tsx",
-                            lineNumber: 58,
+                            lineNumber: 66,
                             columnNumber: 15
                         }, this))
                 }, void 0, false, {
                     fileName: "[project]/src/app/components/Navbar/Navbar.tsx",
-                    lineNumber: 56,
+                    lineNumber: 64,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/components/Navbar/Navbar.tsx",
-                lineNumber: 55,
+                lineNumber: 63,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/components/Navbar/Navbar.tsx",
-        lineNumber: 29,
+        lineNumber: 37,
         columnNumber: 5
     }, this);
 }
@@ -266,8 +269,11 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$mo
 ;
 ;
 function BackgroundPart({ aboutRef, advantagesRef, servicesRef, contactRef }) {
-    const videoRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(null);
-    const videoInView = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$utils$2f$use$2d$in$2d$view$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useInView"])(videoRef, {
+    // Используем containerRef для <motion.div>
+    const containerRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(null);
+    const videoRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(null); // Для <video>
+    // Используем containerRef для useInView, так как анимация относится к <motion.div>
+    const containerInView = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$utils$2f$use$2d$in$2d$view$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useInView"])(containerRef, {
         once: true
     });
     const bottomDivRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(null);
@@ -278,12 +284,12 @@ function BackgroundPart({ aboutRef, advantagesRef, servicesRef, contactRef }) {
         className: "w-full h-screen relative bg-transparent overflow-hidden",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
-                ref: videoRef,
+                ref: containerRef,
                 initial: {
                     opacity: 0,
                     scale: 0.9
                 },
-                animate: videoInView ? {
+                animate: containerInView ? {
                     opacity: 1,
                     scale: 1
                 } : {},
@@ -292,6 +298,7 @@ function BackgroundPart({ aboutRef, advantagesRef, servicesRef, contactRef }) {
                 },
                 className: "absolute top-0 left-0 z-10 w-full h-full",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("video", {
+                    ref: videoRef,
                     src: "vidik.mp4",
                     autoPlay: true,
                     loop: true,
@@ -300,31 +307,31 @@ function BackgroundPart({ aboutRef, advantagesRef, servicesRef, contactRef }) {
                     className: "w-full h-full object-cover"
                 }, void 0, false, {
                     fileName: "[project]/src/app/components/BackGroundPart/BackGroundPart.tsx",
-                    lineNumber: 32,
+                    lineNumber: 39,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/components/BackGroundPart/BackGroundPart.tsx",
-                lineNumber: 25,
+                lineNumber: 32,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "absolute top-0 left-0 w-full h-full bg-black opacity-60 z-20"
             }, void 0, false, {
                 fileName: "[project]/src/app/components/BackGroundPart/BackGroundPart.tsx",
-                lineNumber: 34,
+                lineNumber: 49,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "absolute top-0 left-0 w-full z-30",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$Header$2f$Header$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                     fileName: "[project]/src/app/components/BackGroundPart/BackGroundPart.tsx",
-                    lineNumber: 36,
+                    lineNumber: 51,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/components/BackGroundPart/BackGroundPart.tsx",
-                lineNumber: 35,
+                lineNumber: 50,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -336,12 +343,12 @@ function BackgroundPart({ aboutRef, advantagesRef, servicesRef, contactRef }) {
                     contactRef: contactRef
                 }, void 0, false, {
                     fileName: "[project]/src/app/components/BackGroundPart/BackGroundPart.tsx",
-                    lineNumber: 39,
+                    lineNumber: 54,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/components/BackGroundPart/BackGroundPart.tsx",
-                lineNumber: 38,
+                lineNumber: 53,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -366,7 +373,7 @@ function BackgroundPart({ aboutRef, advantagesRef, servicesRef, contactRef }) {
                             children: "ОПС Строй"
                         }, void 0, false, {
                             fileName: "[project]/src/app/components/BackGroundPart/BackGroundPart.tsx",
-                            lineNumber: 49,
+                            lineNumber: 69,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -374,24 +381,24 @@ function BackgroundPart({ aboutRef, advantagesRef, servicesRef, contactRef }) {
                             children: "Безопасность — наша приоритетная задача"
                         }, void 0, false, {
                             fileName: "[project]/src/app/components/BackGroundPart/BackGroundPart.tsx",
-                            lineNumber: 50,
+                            lineNumber: 70,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/components/BackGroundPart/BackGroundPart.tsx",
-                    lineNumber: 42,
+                    lineNumber: 62,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/components/BackGroundPart/BackGroundPart.tsx",
-                lineNumber: 41,
+                lineNumber: 61,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/components/BackGroundPart/BackGroundPart.tsx",
-        lineNumber: 24,
+        lineNumber: 31,
         columnNumber: 5
     }, this);
 }
@@ -434,7 +441,7 @@ const AboutSection = ({ aboutRef, aboutInView })=>/*#__PURE__*/ (0, __TURBOPACK_
                             children: "О нас"
                         }, void 0, false, {
                             fileName: "[project]/src/app/components/AboutSection/AboutSection.tsx",
-                            lineNumber: 19,
+                            lineNumber: 22,
                             columnNumber: 9
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -442,7 +449,7 @@ const AboutSection = ({ aboutRef, aboutInView })=>/*#__PURE__*/ (0, __TURBOPACK_
                             children: "Мы — ОПС Строй, работаем на рынке безопасности более 10 лет. Наша миссия — обеспечить спокойствие и защиту каждого клиента, используя современные технологии и опытную команду."
                         }, void 0, false, {
                             fileName: "[project]/src/app/components/AboutSection/AboutSection.tsx",
-                            lineNumber: 20,
+                            lineNumber: 23,
                             columnNumber: 9
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -451,18 +458,18 @@ const AboutSection = ({ aboutRef, aboutInView })=>/*#__PURE__*/ (0, __TURBOPACK_
                                 children: "Подробнее"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/components/AboutSection/AboutSection.tsx",
-                                lineNumber: 25,
+                                lineNumber: 28,
                                 columnNumber: 11
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/app/components/AboutSection/AboutSection.tsx",
-                            lineNumber: 24,
+                            lineNumber: 27,
                             columnNumber: 9
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/components/AboutSection/AboutSection.tsx",
-                    lineNumber: 18,
+                    lineNumber: 21,
                     columnNumber: 7
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -476,7 +483,7 @@ const AboutSection = ({ aboutRef, aboutInView })=>/*#__PURE__*/ (0, __TURBOPACK_
                                 children: "ОПС Строй"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/components/AboutSection/AboutSection.tsx",
-                                lineNumber: 32,
+                                lineNumber: 35,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -485,7 +492,7 @@ const AboutSection = ({ aboutRef, aboutInView })=>/*#__PURE__*/ (0, __TURBOPACK_
                                 children: "Охранное предприятие в Актобе"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/components/AboutSection/AboutSection.tsx",
-                                lineNumber: 38,
+                                lineNumber: 41,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("iframe", {
@@ -497,24 +504,24 @@ const AboutSection = ({ aboutRef, aboutInView })=>/*#__PURE__*/ (0, __TURBOPACK_
                                 referrerPolicy: "no-referrer-when-downgrade"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/components/AboutSection/AboutSection.tsx",
-                                lineNumber: 44,
+                                lineNumber: 47,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/components/AboutSection/AboutSection.tsx",
-                        lineNumber: 31,
+                        lineNumber: 34,
                         columnNumber: 9
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/app/components/AboutSection/AboutSection.tsx",
-                    lineNumber: 30,
+                    lineNumber: 33,
                     columnNumber: 7
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/app/components/AboutSection/AboutSection.tsx",
-            lineNumber: 11,
+            lineNumber: 14,
             columnNumber: 5
         }, this)
     }, void 0, false, {
@@ -949,12 +956,12 @@ const Scroll = ()=>{
                     contactRef: contactRef
                 }, void 0, false, {
                     fileName: "[project]/src/app/components/Scroll/Scroll.tsx",
-                    lineNumber: 29,
+                    lineNumber: 27,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/components/Scroll/Scroll.tsx",
-                lineNumber: 28,
+                lineNumber: 26,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$AboutSection$2f$AboutSection$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -962,7 +969,7 @@ const Scroll = ()=>{
                 aboutInView: aboutInView
             }, void 0, false, {
                 fileName: "[project]/src/app/components/Scroll/Scroll.tsx",
-                lineNumber: 37,
+                lineNumber: 35,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$AdvantagesSection$2f$AdvantagesSection$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -970,7 +977,7 @@ const Scroll = ()=>{
                 advantagesInView: advantagesInView
             }, void 0, false, {
                 fileName: "[project]/src/app/components/Scroll/Scroll.tsx",
-                lineNumber: 38,
+                lineNumber: 36,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$ServicesSection$2f$ServicesSection$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -978,7 +985,7 @@ const Scroll = ()=>{
                 servicesInView: servicesInView
             }, void 0, false, {
                 fileName: "[project]/src/app/components/Scroll/Scroll.tsx",
-                lineNumber: 39,
+                lineNumber: 37,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].section, {
@@ -1001,18 +1008,18 @@ const Scroll = ()=>{
                     contactInView: contactInView
                 }, void 0, false, {
                     fileName: "[project]/src/app/components/Scroll/Scroll.tsx",
-                    lineNumber: 48,
+                    lineNumber: 46,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/components/Scroll/Scroll.tsx",
-                lineNumber: 40,
+                lineNumber: 38,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/components/Scroll/Scroll.tsx",
-        lineNumber: 27,
+        lineNumber: 25,
         columnNumber: 5
     }, this);
 };

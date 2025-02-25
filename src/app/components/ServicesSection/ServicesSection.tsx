@@ -1,9 +1,9 @@
-import React from "react"
-import { motion } from "framer-motion"
+import React from "react";
+import { motion } from "framer-motion";
 
 interface ServicesSectionProps {
-  servicesRef: React.RefObject<HTMLDivElement>
-  servicesInView: boolean
+  servicesRef: React.RefObject<HTMLDivElement | null>;
+  servicesInView: boolean;
 }
 
 const ServicesSection: React.FC<ServicesSectionProps> = ({ servicesRef, servicesInView }) => (
@@ -40,6 +40,6 @@ const ServicesSection: React.FC<ServicesSectionProps> = ({ servicesRef, services
       </ul>
     </div>
   </motion.section>
-)
+);
 
-export default ServicesSection
+export default ServicesSection;

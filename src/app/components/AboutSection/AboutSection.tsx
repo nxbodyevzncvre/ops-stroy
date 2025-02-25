@@ -1,13 +1,16 @@
-import React from "react"
-import { motion } from "framer-motion"
+import React from "react";
+import { motion } from "framer-motion";
 
 interface AboutSectionProps {
-  aboutRef: React.RefObject<HTMLDivElement>
-  aboutInView: boolean
+  aboutRef: React.RefObject<HTMLDivElement | null>;
+  aboutInView: boolean;
 }
 
 const AboutSection: React.FC<AboutSectionProps> = ({ aboutRef, aboutInView }) => (
-  <section className="py-12 bg-gray-900 text-white min-h-screen flex justify-center items-center" id="about">
+  <section
+    className="py-12 bg-gray-900 text-white min-h-screen flex justify-center items-center"
+    id="about"
+  >
     <motion.div
       ref={aboutRef}
       initial={{ opacity: 0, x: -50 }}
@@ -41,11 +44,18 @@ const AboutSection: React.FC<AboutSectionProps> = ({ aboutRef, aboutInView }) =>
           >
             Охранное предприятие в Актобе
           </a>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2548.4530170965663!2d57.1724311!3d50.3021375!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41822100735e796d%3A0x9985b5353bf37ec2!2z0J7Qn9ChINCh0YLRgNC-0Lk!5e0!3m2!1sru!2ssk!4v1740485307608!5m2!1sru!2ssk" width="600" height="450"  allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2548.4530170965663!2d57.1724311!3d50.3021375!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41822100735e796d%3A0x9985b5353bf37ec2!2z0J7Qn9ChINCh0YLRgNC-0Lk!5e0!3m2!1sru!2ssk!4v1740485307608!5m2!1sru!2ssk"
+            width="600"
+            height="450"
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
         </div>
       </div>
     </motion.div>
   </section>
-)
+);
 
-export default AboutSection
+export default AboutSection;

@@ -1,29 +1,37 @@
-"use client"
+"use client";
 
-import { type RefObject, useState } from "react"
-import { Menu, X } from "lucide-react"
+import { type RefObject, useState } from "react";
+import { Menu, X } from "lucide-react";
 
 interface NavbarProps {
-  aboutRef: RefObject<HTMLDivElement>
-  advantagesRef: RefObject<HTMLDivElement>
-  servicesRef: RefObject<HTMLDivElement>
-  contactRef: RefObject<HTMLDivElement>
+  aboutRef: RefObject<HTMLDivElement | null>;
+  advantagesRef: RefObject<HTMLDivElement | null>;
+  servicesRef: RefObject<HTMLDivElement | null>;
+  contactRef: RefObject<HTMLDivElement | null>;
 }
 
-export default function Navbar({ aboutRef, advantagesRef, servicesRef, contactRef }: NavbarProps) {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+export default function Navbar({
+  aboutRef,
+  advantagesRef,
+  servicesRef,
+  contactRef,
+}: NavbarProps) {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const handleScroll = (ref: RefObject<HTMLDivElement>) => {
-    ref.current?.scrollIntoView({ behavior: "smooth" })
-    setIsMenuOpen(false)
-  }
+  const handleScroll = (ref: RefObject<HTMLDivElement | null>) => {
+    // Проверяем, что ref.current существует, чтобы избежать ошибок
+    if (ref.current) {
+      ref.current.scrollIntoView({ behavior: "smooth" });
+    }
+    setIsMenuOpen(false);
+  };
 
   const navItems = [
     { name: "О нас", ref: aboutRef },
     { name: "Преимущества", ref: advantagesRef },
     { name: "Услуги", ref: servicesRef },
     { name: "Связаться", ref: contactRef },
-  ]
+  ];
 
   return (
     <nav className="text-white/60 z-20 relative w-full">
@@ -38,7 +46,7 @@ export default function Navbar({ aboutRef, advantagesRef, servicesRef, contactRe
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
-          <ul className="hidden md:flex space-x-4 ">
+          <ul className="hidden md:flex space-x-4">
             {navItems.map((item) => (
               <li
                 key={item.name}
@@ -52,8 +60,8 @@ export default function Navbar({ aboutRef, advantagesRef, servicesRef, contactRe
         </div>
       </div>
       {isMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 shadow-lg ">
-          <ul className="flex flex-col p-4 ">
+        <div className="md:hidden absolute top-full left-0 right-0 shadow-lg">
+          <ul className="flex flex-col p-4">
             {navItems.map((item) => (
               <li
                 key={item.name}
@@ -67,6 +75,5 @@ export default function Navbar({ aboutRef, advantagesRef, servicesRef, contactRe
         </div>
       )}
     </nav>
-  )
+  );
 }
-
