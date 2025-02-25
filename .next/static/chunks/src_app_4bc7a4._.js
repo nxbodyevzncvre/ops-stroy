@@ -21,7 +21,6 @@ function Navbar({ aboutRef, advantagesRef, servicesRef, contactRef }) {
     _s();
     const [isMenuOpen, setIsMenuOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const handleScroll = (ref)=>{
-        // Проверяем, что ref.current существует, чтобы избежать ошибок
         if (ref.current) {
             ref.current.scrollIntoView({
                 behavior: "smooth"
@@ -112,9 +111,9 @@ function Navbar({ aboutRef, advantagesRef, servicesRef, contactRef }) {
                 columnNumber: 7
             }, this),
             isMenuOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "md:hidden absolute top-full left-0 right-0 shadow-lg",
+                className: "md:hidden absolute top-full left-0 right-0 bg-gray-600 rounded-md shadow-lg",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
-                    className: "flex flex-col p-4",
+                    className: "flex flex-col p-4 ",
                     children: navItems.map((item)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                             className: "nav-item py-2 cursor-pointer hover:text-white transition-colors duration-200",
                             onClick: ()=>handleScroll(item.ref),

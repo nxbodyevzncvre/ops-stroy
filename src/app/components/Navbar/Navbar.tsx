@@ -19,7 +19,7 @@ export default function Navbar({
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleScroll = (ref: RefObject<HTMLDivElement | null>) => {
-    // Проверяем, что ref.current существует, чтобы избежать ошибок
+
     if (ref.current) {
       ref.current.scrollIntoView({ behavior: "smooth" });
     }
@@ -60,8 +60,8 @@ export default function Navbar({
         </div>
       </div>
       {isMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 shadow-lg">
-          <ul className="flex flex-col p-4">
+        <div className="md:hidden absolute top-full left-0 right-0 bg-gray-600 rounded-md shadow-lg">
+          <ul className="flex flex-col p-4 ">
             {navItems.map((item) => (
               <li
                 key={item.name}
