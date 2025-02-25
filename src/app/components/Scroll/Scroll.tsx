@@ -13,10 +13,10 @@ import Contacts from "@/app/components/Contacts/Contacts" // Add this import
 
 
 const Scroll: React.FC = () => {
-  const aboutRef = useRef(null)
-  const advantagesRef = useRef(null)
-  const servicesRef = useRef(null)
-  const contactRef = useRef(null)
+  const aboutRef = useRef<HTMLDivElement>(null)
+  const advantagesRef = useRef<HTMLDivElement>(null)
+  const servicesRef = useRef<HTMLDivElement>(null)
+  const contactRef = useRef<HTMLDivElement>(null)
 
   const aboutInView = useInView(aboutRef, { once: true })
   const advantagesInView = useInView(advantagesRef, { once: true })
