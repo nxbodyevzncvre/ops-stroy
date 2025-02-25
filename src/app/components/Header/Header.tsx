@@ -9,7 +9,7 @@ import { motion, AnimatePresence } from "framer-motion"
 export default function Header() {
   const [showNotification, setShowNotification] = useState(false)
 
-  const handlePhoneClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+  const handlePhoneClick = (e: MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault()
     const phoneNumber = "+77054000201"
     if (navigator.clipboard) {
