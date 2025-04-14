@@ -24,11 +24,6 @@ const AboutSection: React.FC<AboutSectionProps> = ({ aboutRef, aboutInView }) =>
           Мы — ОПС Строй, работаем на рынке безопасности более 10 лет. Наша миссия — обеспечить спокойствие и защиту
           каждого клиента, используя современные технологии и опытную команду.
         </p>
-        <div>
-          <button className="bg-blue-600 flex mx-auto md:mx-0 text-white py-2 px-6 rounded-lg shadow-md hover:bg-blue-700 transition">
-            Подробнее
-          </button>
-        </div>
       </div>
       <div className="w-full md:w-1/2">
         <div className="rounded-2xl shadow-lg relative z-10 overflow-hidden">
