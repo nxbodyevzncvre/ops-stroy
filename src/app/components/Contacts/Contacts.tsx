@@ -27,7 +27,7 @@ export default function Contacts({ contactsRef, contactInView }: ContactsProps) 
             <div className="flex justify-center">
               <button
                 className="bg-red-600 hover:bg-red-700 text-white transition-all duration-300 ease-in-out transform hover:scale-105 px-6 py-3 rounded-lg text-lg font-semibold flex items-center"
-                onClick={() => (window.location.href = "tel:+77XXXXXXXXX")}
+                onClick={() => (window.location.href = "tel:+77054000201")}
               >
                 <Phone className="mr-2 h-5 w-5" />
                 Позвонить сейчас
